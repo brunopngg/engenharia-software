@@ -1,0 +1,19 @@
+.simulador-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.slider-container {
+  margin: 20px 0;
+}
+
+.grafico-container {
+  height: 400px;
+}
+
+.resultado {
+  margin-top: 20px;
+  font-weight: bold;
+}

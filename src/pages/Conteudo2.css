@@ -1,0 +1,162 @@
+/* --- Estilos Gerais para a Página de Atividades --- */
+
+/* O container principal que envolve toda a página de atividades. */
+/* A cor de fundo é a mesma do seu `body` para manter a consistência. */
+.atividades-container {
+  background-color: #FFFBDE;
+  padding: 140px 40px 40px; /* Padding superior para não ficar atrás do header fixo */
+  max-width: 900px;
+  margin: 0 auto; /* Centraliza o conteúdo na tela */
+  font-family: Arial, sans-serif;
+}
+
+/* Título principal da página */
+.atividades-container h1 {
+  text-align: center;
+  color: #096B68; /* Cor principal do tema */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Parágrafo de introdução */
+.atividades-container p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+
+/* --- Seções de Tópicos (Limites, Derivadas, Integrais) --- */
+
+/* Container para cada grupo de exercícios */
+.topic-section {
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(9, 107, 104, 0.2); /* Linha divisória sutil com a cor do tema */
+}
+
+/* Título de cada seção (h2) */
+.topic-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 10px;
+}
+
+/* Cores específicas para cada título, combinando com o header */
+.topic-section.limites h2 {
+  color: #096B68;
+  border-left: 5px solid #096B68;
+}
+
+.topic-section.derivadas h2 {
+  color: #129990;
+  border-left: 5px solid #129990;
+}
+
+.topic-section.integrais h2 {
+  color: #096B68;
+  border-left: 5px solid #096B68;
+}
+
+
+/* --- Card de Atividade Individual --- */
+
+/* O card que contém um único exercício */
+.activity-card {
+  background-color: #FEFEFE; /* Fundo branco para destacar do fundo da página */
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do exercício dentro do card */
+.activity-card h4 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #34495e;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Conteúdo do problema */
+.problem-content {
+  margin: 1rem 0;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+
+/* --- Elementos Interativos do Card --- */
+
+/* Botão para mostrar/ocultar a solução */
+.solution-button {
+  background-color: #129990; /* Cor de destaque do tema */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.solution-button:hover {
+  background-color: #0f7a73; /* Tom mais escuro no hover */
+  transform: scale(1.03);
+}
+
+/* Área da solução, que aparece ao clicar no botão */
+.solution-content {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f1f8f8; /* Fundo levemente colorido para diferenciar */
+  border-left: 4px solid #129990; /* Destaque lateral com a cor do botão */
+  border-radius: 0 5px 5px 0;
+  animation: fadeInSolution 0.5s ease;
+}
+
+.solution-content h5 {
+  margin-top: 0;
+  color: #096B68;
+  font-size: 1.1rem;
+}
+
+/* Animação para a solução aparecer suavemente */
+@keyframes fadeInSolution {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* --- Media Query para Telas Menores --- */
+
+@media (max-width: 768px) {
+  .atividades-container {
+    padding: 180px 20px 20px; /* Mais padding no topo por causa do header empilhado */
+  }
+
+  .atividades-container h1 {
+    font-size: 2rem;
+  }
+
+  .activity-card {
+    padding: 1rem 1.5rem;
+  }
+}

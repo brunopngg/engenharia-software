@@ -1,0 +1,41 @@
+/* Ocupa 100% da viewport */
+.home-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+/* Diferenciar as seções com cores */
+.home-section:nth-child(1) {
+  background-color: #096B68;
+}
+
+.home-section:nth-child(2) {
+  background-color: #129990;
+}
+
+.home-section:nth-child(3) {
+  background-color: #096B68;
+}
+
+/* Hover efeito */
+.home-section:hover {
+  filter: brightness(0.9);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+  cursor: pointer;
+
+
+}
